@@ -1,5 +1,6 @@
 import React from "react";
 import sty from './CalculatorSection.module.css'
+import Percents from "./Percents/Percents";
 
 class CalculatorSection extends React.Component{
 
@@ -37,7 +38,8 @@ class CalculatorSection extends React.Component{
     }
 
     setPercent(e){
-        const value = e.target.value
+        console.log('setPErcent')
+    /*    const value = e.target.value
         if(e.target.checked && this.state.radioValue !== value){
             console.log('Dio true')
             this.setState({
@@ -55,7 +57,7 @@ class CalculatorSection extends React.Component{
             },()=>{
                 this.calculatePercent(value,false)
             })
-        }   
+        }   */
     }
 
     calculatePercent(value, go){
@@ -102,7 +104,10 @@ class CalculatorSection extends React.Component{
         })
     }
 
+   
+
     render(){
+        
         return (
             <div className={sty.container}>
                 <div>
@@ -113,7 +118,8 @@ class CalculatorSection extends React.Component{
                     <div>
                     <label>Select Tip %</label>
                     <div className={sty.radioToolbar}>
-                            <input type="radio" value='5' name='percent' id='fivePer'
+                        <Percents onClick={this.setPercent}/>
+                           {/* <input type="radio" value='5' name='percent' id='fivePer'
                             onClick={this.setPercent}
                             />
                             <label htmlFor='fivePer'>5%</label>
@@ -132,7 +138,7 @@ class CalculatorSection extends React.Component{
 
                             <input type="radio" value='50' name='percent' id='fifPerc'
                             onClick={this.setPercent}/>
-                            <label htmlFor='fifPerc'>50%</label>
+        <label htmlFor='fifPerc'>50%</label>*/}
 
                             <input type='number' onChange={this.setPercent} placeholder='Custom' className={`${sty.customPercent} ${sty.hideArrow}`}/>
                         </div>
