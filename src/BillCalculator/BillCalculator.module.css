@@ -1,0 +1,26 @@
+/*Genral*/
+:root {
+    --main-bg-color: rgb(183, 217, 221);    
+  }
+
+.fondo{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+
+/* Estilo para el H1 */
+.text{ 
+    margin-top: 0;
+}
+
+.contenedor{
+    /* width: 700px;
+    height: 450px; */
+    background-color: #fff;
+    border-radius: 1.3rem;
+}
+
