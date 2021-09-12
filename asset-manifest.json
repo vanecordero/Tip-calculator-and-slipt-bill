@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Tip-calculator-and-slipt-bill/static/css/main.7eb0961b.chunk.css",
+    "main.css": "/Tip-calculator-and-slipt-bill/static/css/main.523969cd.chunk.css",
     "main.js": "/Tip-calculator-and-slipt-bill/static/js/main.bfef8af0.chunk.js",
     "main.js.map": "/Tip-calculator-and-slipt-bill/static/js/main.bfef8af0.chunk.js.map",
     "runtime-main.js": "/Tip-calculator-and-slipt-bill/static/js/runtime-main.8a942399.js",
@@ -8,13 +8,13 @@
     "static/js/2.07cb347e.chunk.js": "/Tip-calculator-and-slipt-bill/static/js/2.07cb347e.chunk.js",
     "static/js/2.07cb347e.chunk.js.map": "/Tip-calculator-and-slipt-bill/static/js/2.07cb347e.chunk.js.map",
     "index.html": "/Tip-calculator-and-slipt-bill/index.html",
-    "static/css/main.7eb0961b.chunk.css.map": "/Tip-calculator-and-slipt-bill/static/css/main.7eb0961b.chunk.css.map",
+    "static/css/main.523969cd.chunk.css.map": "/Tip-calculator-and-slipt-bill/static/css/main.523969cd.chunk.css.map",
     "static/js/2.07cb347e.chunk.js.LICENSE.txt": "/Tip-calculator-and-slipt-bill/static/js/2.07cb347e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8a942399.js",
     "static/js/2.07cb347e.chunk.js",
-    "static/css/main.7eb0961b.chunk.css",
+    "static/css/main.523969cd.chunk.css",
     "static/js/main.bfef8af0.chunk.js"
   ]
 }
