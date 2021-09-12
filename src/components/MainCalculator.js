@@ -6,7 +6,10 @@ class MainCalculator extends React.Component{
 
     render(){return (
         <div className={style.fondo}>
-            <h1  className={style.text}>SPLITTER</h1>
+            <div className={style.text}>
+                <span className={style.splitRight}>SPLITTER</span>
+                <span className={style.splitLeft}>SPLITTER</span>
+            </div>
             <div className={style.contenedor}>
                 <div><CalculatorSection/></div>
             </div>

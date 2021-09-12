@@ -51,10 +51,20 @@ class CalculatorSection extends Component{
     }    
 
     reset(){
-        this.entrada.current.value = ''
+        this.entrada.current.value = '';
+        this.inputPerson.current.value = '';
+        if(this.state.wasCheck) {
+            document.getElementById(this.state.idRadio).checked = false;
+        }
         this.setState({
-            sliptTip: 0.00,
-            TotalPerson: 0.00
+            sliptTip: 0.00,            
+            numOfPeople: 1,
+            TotalPerson:0,
+            totalBill: 0.00,
+            percent:false,
+            radioValue: 0,
+            idRadio:'',
+            wasCheck: false
        })
     }
    
@@ -96,7 +106,7 @@ class CalculatorSection extends Component{
                 wasCheck: true
             })
         }
-        if((this.percentCustom.current.value==''&&custom)||(this.percentCustom.current.value<1&&custom)){
+        if((this.percentCustom.current.value===''&&custom)||(this.percentCustom.current.value<1&&custom)){
             this.percentCustom.current.value='';
             value=0
         }
@@ -140,11 +150,15 @@ class CalculatorSection extends Component{
         return (
             <div className={sty.container}>
                 <div>
-                    <div>
+                    <div className={sty.billCnt}>
                         <label>Bill</label>
-                        <input type='number' onChange={this.setBill} ref={this.entrada}/>
+                        
+                        <input type='number' 
+                        onChange={this.setBill} 
+                        ref={this.entrada}
+                        className={`${sty.billNPeop} ${sty.hideArrow}`}/>
                     </div>
-                    <div>
+                    <div className={sty.ctnPercentage}>
                         <label>Select Tip %</label>
                         <div className={sty.radioToolbar}>
                         {               
@@ -175,18 +189,21 @@ class CalculatorSection extends Component{
                     <div>
                         <label>Number of people</label>
                         <input type='number'
+                        className={`${sty.billNPeop} ${sty.hideArrow}`}
                         onChange={this.changePeople}
                         placeholder='1'  
                         ref={this.inputPerson}                      
                         />
                     </div>
                 </div>
-                <div>
+                <div className={sty.cntTotal}>
                     <div>
-                        <p>Tip Amount ${this.state.sliptTip.toFixed(2)} </p>{/*<SliptTip/>*/}
+                        <p>Tip Amount </p>
+                        <p>${this.state.sliptTip.toFixed(2)}</p>
                     </div>
                     <div>
-                        <p>Total <span>$ {this.state.TotalPerson.toFixed(2)}</span></p>
+                        <p>Total </p>
+                        <p>${this.state.TotalPerson.toFixed(2)}</p>
                     </div>
                     <div>
                         <button onClick={this.reset}>Reset</button>
